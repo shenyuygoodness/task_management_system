@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Task Manager - Shift Left Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<nav>
+    <strong>Task Manager</strong>
+    {% if session.get("user_id") %}
+      <span>Logged in as {{ session.get("username") }}</span>
+      <a href="{{ url_for('logout') }}">Logout</a>
+    {% endif %}
+</nav>
+<main>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <div class="flash">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+</main>
+</body>
+</html>

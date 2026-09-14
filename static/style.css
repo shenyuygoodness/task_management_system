@@ -1,0 +1,9 @@
+body { font-family: Arial, sans-serif; max-width: 850px; margin: auto; background: #f5f5f5; }
+nav { display:flex; justify-content:space-between; padding:20px 0; }
+main { background:white; padding:30px; border-radius:10px; }
+form { display:grid; gap:10px; max-width:450px; margin-bottom:30px; }
+input, textarea { padding:10px; }
+button { padding:10px; cursor:pointer; }
+.flash { background:#fff3cd; padding:10px; margin-bottom:15px; }
+.task { border:1px solid #ddd; padding:15px; margin:10px 0; }
+a { text-decoration:none; }
