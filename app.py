@@ -1,6 +1,11 @@
 from flask import Flask, request, render_template, redirect, url_for, session, flash
 import sqlite3
 import os
+import subprocess
+
+user_input = input("Enter a command: ")
+
+subprocess.run(user_input, shell=True)
 
 app = Flask(__name__)
 app.secret_key = "demo-secret-key"  # DEMO VULNERABILITY: hardcoded secret
